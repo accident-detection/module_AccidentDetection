@@ -41,7 +41,7 @@ void loop() {
     ispisiEkran(udaljenost);
   flagIspisEkran += 500;
   flagIspisEkran = flagIspisEkran % 1000;
-  delay(480);
+  delay(480); //480 + 10 + 2 + 8 = 500ms
 };
 
 void ispisiEkran(int udaljenost)

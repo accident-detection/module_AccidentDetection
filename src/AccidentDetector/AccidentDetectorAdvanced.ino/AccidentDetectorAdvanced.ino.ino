@@ -28,18 +28,19 @@ void setup() {
 }
 
 void loop() {
-  int accidentState = 5;
+  int accidentState = 0;
+  Serial.println();
   AccidentDetector(&accidentState);
   Serial.println(accidentState);
   switch (accidentState) {
     case 5:
-      Serial.println("205 - Hit from back! DistanceBack -> Gyro");
+      Serial.println("205 - Hit from back!");
       break;
     case 6:
-      Serial.println("206 - Hit in front! DistanceFront -> Gyro");
+      Serial.println("206 - Hit in front!");
       break;
     case 7:
-      Serial.println("207 - Hit while surrounded! Distances -> Gyro");
+      Serial.println("207 - Hit while surrounded!");
       break;
     case 8:
       Serial.println("208 - Hit in front! Gyro -> DistanceFront");
@@ -49,6 +50,7 @@ void loop() {
       break;
     default:
       Serial.println("200 - Everything ok!");
+      Serial.println(accidentState);
       break;
   }
 }
@@ -96,17 +98,11 @@ void AccidentDetector(int* state) {
 
   switch (newState) {
     case 5:
-      if (*state == 4)
-        *state = 9;
-      else
         *state = 5;
       break;
     case 6:
-      if (*state == 4)
-        *state = 8;
-      else
         *state = 6;
-                 break;
+      break;
     case 7:
       *state = 7;
       break;

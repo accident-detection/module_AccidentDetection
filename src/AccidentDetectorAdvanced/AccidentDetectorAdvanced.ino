@@ -33,29 +33,29 @@ void loop() {
   AccidentDetector(&accidentState);
   Serial.println(accidentState);
   switch (accidentState) {
-    case 1:
+    case '1':
       Serial.println("201 - Back sensor!");
       break;
-    case 2:
+    case '2':
       Serial.println("202 - Front sensor!");
       break;
-    case 3:
+    case '3':
       Serial.println("203 - Both sensors!");
       break;
-    case 4:
+    case '4':
       Serial.println("204 - Gyro reacted!");
       break;
-    case 5:
+    case '5':
       Serial.println("205 - BACK HIT!");
       Serial.println("205 - BACK HIT!");
       Serial.println("205 - BACK HIT!");
       break;
-    case 6:
+    case '6':
       Serial.println("206 - FRONT HIT!");
       Serial.println("206 - FRONT HIT!");
       Serial.println("206 - FRONT HIT!");
       break;
-    case 7:
+    case '7':
       Serial.println("207 - HIT WHILE SURROUNDED!");
       Serial.println("207 - HIT WHILE SURROUNDED!");
       Serial.println("207 - HIT WHILE SURROUNDED!");

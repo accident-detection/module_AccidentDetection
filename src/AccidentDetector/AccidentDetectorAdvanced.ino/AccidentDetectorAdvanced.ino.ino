@@ -8,10 +8,10 @@ float xv, yv, zv;
 float xold, yold, zold;
 
 //3. Pinns
-#define triggerInput_front 7
-#define echoOutput_front 6
-#define triggerInput_back 4
-#define echoOutput_back 3
+#define triggerInput_front 4
+#define echoOutput_front 3
+#define triggerInput_back 7
+#define echoOutput_back 6
 #define critical_distance 20
 #define critical_gyro_up 1.20
 #define critical_gyro_down 0.80
@@ -34,7 +34,17 @@ void loop() {
   Serial.println(accidentState);
   switch (accidentState) {
     case 1:
-    Serial.println("201 - Back sensor!");
+      Serial.println("201 - Back sensor!");
+      break;
+    case 2:
+      Serial.println("202 - Front sensor!");
+      break;
+    case 3:
+      Serial.println("203 - Both sensors!");
+      break;
+    case 4:
+      Serial.println("204 - Gyro reacted!");
+      break;
     case 5:
       Serial.println("205 - BACK HIT!");
       Serial.println("205 - BACK HIT!");

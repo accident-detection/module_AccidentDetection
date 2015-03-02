@@ -28,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-  int accidentState = 0;
+  char accidentState = 0;
   Serial.println();
   AccidentDetector(&accidentState);
   Serial.println(accidentState);
@@ -66,11 +66,10 @@ void loop() {
   }
 }
 
-void AccidentDetector(int* state) {
+void AccidentDetector(char* state) {
 
   bool distanceFront, distanceBack;
   bool gyroWarning;
-  int newState;
 
   //Polling Gyroscope and Distance sensors
   gyroWarning = ReadGyro();
@@ -81,46 +80,32 @@ void AccidentDetector(int* state) {
   if (gyroWarning == false) {	//0XX
     if (distanceFront == false) {	//00X
       if (distanceBack == false)	//000
-        newState = 0;
+        *state = '0';
       else //001
-        newState = 1;
+        *state = '1';
     }
     else {	//01X
       if (distanceBack == false)	//010
-        newState = 2;
+        *state = '2';
       else //011
-        newState = 3;
+        *state = '3';
     }
   }
   else {	//1XX
     if (distanceFront == false) {	//10X
       if (distanceBack == false)	 //100
-        newState = 4;
+        *state = '4';
       else  //101
-        newState = 5;
+        *state = '5';
     }
     else { //11X
       if (distanceBack == false)	 //110
-        newState = 6;
+        *state = '6';
       else  //111
-        newState = 7;
+        *state = '7';
     }
   }
-
-  switch (newState) {
-    case 5:
-      *state = 5;
-      break;
-    case 6:
-      *state = 6;
-      break;
-    case 7:
-      *state = 7;
-      break;
-    default:
-      *state = newState;
-      break;
-  }
+  
   return;
 }
 

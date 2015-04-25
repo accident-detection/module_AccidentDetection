@@ -13,3 +13,6 @@ Module returns the following codes based on the event:
 * 205 - Gyroscope + Back distance sensor = Hit from back.
 * 206 - Gyroscope + Front distance sensor = Hit in front.
 * 207 - Gyroscope + Both sensors = Hit while surrounded.
+
+
+[Imgur](http://i.imgur.com/whsYFoW.png?1)

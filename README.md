@@ -16,3 +16,4 @@ Module returns the following codes based on the event:
 
 
 http://imgur.com/whsYFoW
+http://i.imgur.com/whsYFoW.png?1

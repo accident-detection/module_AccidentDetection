@@ -15,5 +15,5 @@ Module returns the following codes based on the event:
 * 207 - Gyroscope + Both sensors = Hit while surrounded.
 
 
-http://imgur.com/whsYFoW
+
 http://i.imgur.com/whsYFoW.png?1

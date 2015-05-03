@@ -14,6 +14,8 @@ Module returns the following codes based on the event:
 * 206 - Gyroscope + Front distance sensor = Hit in front.
 * 207 - Gyroscope + Both sensors = Hit while surrounded.
 
+### Simple automata picture
+<a href="http://imgur.com/ZEctSZr"><img src="http://i.imgur.com/ZEctSZr.png" title="source: imgur.com" /></a>
 
-
+### Full automata picture
 <a href="http://imgur.com/kDyclCL"><img src="http://i.imgur.com/kDyclCL.png?1" title="source: imgur.com" /></a>

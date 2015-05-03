@@ -15,6 +15,9 @@ Module returns the following codes based on the event:
 * 207 - Gyroscope + Both sensors = Hit while surrounded.
 
 ### Simple automata picture
+In the simplified version of the automata, following things are not present in the picture:
+* Connections between all the states - to make the graph more readable only basic transitions between states were drawn.
+* The automata can actually move from any state Q0-Q4 into any other state. This is because all the three parameters (gyroscope, front and back sensor) are polled in a row and the next state is determined according to their values combined.
 <a href="http://imgur.com/ZEctSZr"><img src="http://i.imgur.com/ZEctSZr.png" title="source: imgur.com" /></a>
 
 ### Full automata picture

@@ -16,4 +16,4 @@ Module returns the following codes based on the event:
 
 
 
-<a href="http://imgur.com/whsYFoW"><img src="http://i.imgur.com/whsYFoW.png?1" title="source: imgur.com" /></a>
+<a href="http://imgur.com/kDyclCL"><img src="http://i.imgur.com/kDyclCL.png?1" title="source: imgur.com" /></a>
